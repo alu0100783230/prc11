@@ -49,28 +49,11 @@ class Bibliografia
         @Tipo    
     end
     
-    def <=> (o)
-        i = 0
-        #buscar caracteres diferentes
-        while @Title[i]==o.Title[i] && i<@Title.length && i<o.Title.length do
-            i=i+1
-        end
-        
-        if i<@Title.length && i<o.Title.length
-            if @Title[i]<o.Title[i]
-                -1
-            else
-                1
-            end
+    def <=> (o)  
+        if @Title!=o.Title
+            @Title <=> o.Title
         else
-            if @Fecha_Publication[7..10]<o.Fecha_Publication[7..10]
-                -1
-            elsif @Fecha_Publication[7..10]>o.Fecha_Publication[7..10]
-                1
-            else
-                0
-            end
+            @Fecha_Publication[7..10] <=> o.Fecha_Publication[7..10]
         end
     end
-        
 end

@@ -8,7 +8,6 @@ require './lib/Lista/Libro.rb'
 describe Lista do
   before :all do
     @l = Lista::Lista.new
-    @l2 = Lista::Lista.new
     @a = Revista.new
     @a.add_title("Nature")
     @b = Libro.new
@@ -60,6 +59,10 @@ describe Lista do
       expect(@a>@b).to eq(true)
     end
     
+    it "Nature > B.O.E." do
+      expect(@a>@c).to eq(true)
+    end
+    
     it "B.O.E. < Frankenstein" do
       expect(@c<@b).to eq(true)
     end
@@ -73,11 +76,20 @@ describe Lista do
     it "all?" do
       expect(@l.all?).to eq(true)
     end
-    it "comprobrando el metodo count" do
-	     expect(@l.count).to eq(3)
+    it "count" do
+      expect(@l.count).to eq(3)
     end
-    it "comprobrando el metodo any?" do
-        expect(@l.any?).to eq(true)
-    end 
+    it "any?" do
+      expect(@l.any?).to eq(true)
+    end
+    it "max" do
+      expect(@l.max).to eq(@a)
+    end
+    it "min" do
+      expect(@l.min).to eq(@c)
+    end
+    it "comprobando drop" do
+      expect(@l.drop(0)).to eq([@a,@b,@c])
+    end
   end
 end

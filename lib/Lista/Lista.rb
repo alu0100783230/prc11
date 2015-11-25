@@ -86,7 +86,7 @@ class Lista
     def each
         aux = @First
         while aux!=nil
-            yield @First.value
+            yield aux.value
             aux = aux.next
         end
     end
