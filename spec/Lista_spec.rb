@@ -8,6 +8,8 @@ require './lib/Lista/Libro.rb'
 describe Lista do
   before :all do
     @l = Lista.new
+    @l2 = Lista.new
+    @l3 = Lista.new
     @a = Revista.new
     @a.add_title("Nature")
     @b = Libro.new
@@ -63,6 +65,12 @@ describe Lista do
     it "B.O.E. <=> Frankenstein = -1" do
       expect(@c<=>@b).to eq(-1)
     end
-    
+  end
+  
+  describe "Enumerar" do
+    it "all?" do
+      expect(@l.all?).to eq(true)
+      expect(@l2.all?).to eq(false)
+    end
   end
 end
