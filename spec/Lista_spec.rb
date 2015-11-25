@@ -5,7 +5,7 @@ require './lib/Lista/DocumentoE.rb'
 require './lib/Lista/Revista.rb'
 require './lib/Lista/Libro.rb'
 
-describe Lista do
+describe Listaa::Lista do
   before :all do
     @l = Listaa::Lista.new
     @a = Revista.new
