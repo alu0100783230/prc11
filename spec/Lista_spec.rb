@@ -37,7 +37,7 @@ describe Listaa::Lista do
   end
   
   context "Comprobar especificaciones propias" do
-    it "Índice de impacto de una revista" do
+    it "Indice de impacto de una revista" do
       @a.impacto = 29.27
       expect(@a.impacto).to eq(29.27)
     end
