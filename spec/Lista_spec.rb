@@ -73,5 +73,11 @@ describe Lista do
     it "all?" do
       expect(@l.all?).to eq(true)
     end
+    it "comprobrando el metodo count" do
+	     expect(@l.count).to eq(3)
+    end
+    it "comprobrando el metodo any?" do
+        expect(@l.any?).to eq(true)
+    end 
   end
 end
