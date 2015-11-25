@@ -10,7 +10,7 @@ class Bibliografia
         @Fecha_Publication = "01-ENE-1901"
         @Tipo = nil
     end
-    
+
     def add_author(name)
         if(@Author[0] == "Sin autores")
             @Author[0] = name 

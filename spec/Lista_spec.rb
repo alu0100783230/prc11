@@ -50,4 +50,19 @@ describe Lista do
       expect(@a.ISSN).to eq(6146816)
     end
   end
+  
+  describe "Comparar" do
+    it "Nature > Frankenstein" do
+      expect(@a>@b).to eq(true)
+    end
+    
+    it "B.O.E. < Frankenstein" do
+      expect(@c<@b).to eq(true)
+    end
+    
+    it "B.O.E. <=> Frankenstein = -1" do
+      expect(@c<=>@b).to eq(-1)
+    end
+    
+  end
 end
