@@ -88,8 +88,11 @@ describe Lista do
     it "min" do
       expect(@l.min).to eq(@c)
     end
-    it "comprobando drop" do
+    it "drop" do
       expect(@l.drop(0)).to eq([@a,@b,@c])
+    end
+    it "sort" do
+      expect(@l.sort).to eq([@c,@b,@a])
     end
   end
 end
