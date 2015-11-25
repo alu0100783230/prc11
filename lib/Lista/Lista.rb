@@ -1,3 +1,4 @@
+module Lista
 
 Nodo = Struct.new(:value, :next, :prev)
 
@@ -89,4 +90,6 @@ class Lista
             aux = aux.next
         end
     end
+end
+
 end

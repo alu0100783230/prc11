@@ -7,8 +7,8 @@ require './lib/Lista/Libro.rb'
 
 describe Lista do
   before :all do
-    @l = Lista.new
-    @l2 = Lista.new
+    @l = Lista::Lista.new
+    @l2 = Lista::Lista.new
     @a = Revista.new
     @a.add_title("Nature")
     @b = Libro.new
