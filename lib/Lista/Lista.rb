@@ -2,6 +2,7 @@
 Nodo = Struct.new(:value, :next, :prev)
 
 class Lista 
+    include Enumerable
     attr_reader :First, :Sz
     def initialize
         @First = nil
@@ -78,6 +79,14 @@ class Lista
             aux.value
         else
             nil
+        end
+    end
+    
+    def each
+        aux = @First
+        while aux!=nil
+            yield @First.value
+            aux = aux.next
         end
     end
 end

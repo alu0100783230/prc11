@@ -9,13 +9,15 @@ describe Lista do
   before :all do
     @l = Lista.new
     @l2 = Lista.new
-    @l3 = Lista.new
     @a = Revista.new
     @a.add_title("Nature")
     @b = Libro.new
     @b.add_title("Frankenstein o el moderno Prometeo")
     @c = DocumentoE.new
     @c.add_title("B.O.E.")
+    @l.push_back(@a)
+    @l.push_back(@b)
+    @l.push_back(@c)
   end
   
   describe "Comprobar tipo" do
@@ -70,7 +72,6 @@ describe Lista do
   describe "Enumerar" do
     it "all?" do
       expect(@l.all?).to eq(true)
-      expect(@l2.all?).to eq(false)
     end
   end
 end
