@@ -5,6 +5,6 @@ require "Lista/Revista.rb"
 require "Lista/version.rb"
 require "Lista/Lista.rb"
 
-module Lista
+module Listaa
     
 end

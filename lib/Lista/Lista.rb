@@ -1,4 +1,4 @@
-module Lista
+module Listaa
 
 Nodo = Struct.new(:value, :next, :prev)
 
