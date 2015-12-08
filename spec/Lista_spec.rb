@@ -20,12 +20,17 @@ describe Listaa::Lista do
     @b1 = Listaa::Bibliografia.new
     @b2 = Listaa::Bibliografia.new
     @b3 = Listaa::Bibliografia.new
+    @b4 = Listaa::Bibliografia.new
     @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
+    @b1.set_publication("27-AGO-15")
+    @b4.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
+    @b4.set_publication("26-AGO-15")
     @b2.add_author(["Serguéi"],["Pávlovich","Koroliov"])
     @b3.add_author(["Jean-Jacques"],["Dordain"])
     @l1.push_back(@b2)
     @l1.push_back(@b1)
     @l1.push_back(@b3)
+    @l1.push_back(@b4)
   end
   
   describe "Comprobar autor" do
@@ -46,7 +51,10 @@ describe Listaa::Lista do
   describe "Orden de la lista" do
     #a pesar de haber introducido las referencias al revés deben ordenarse
     it "Primero Von Braun" do
-      expect(@l1.to_s).to eq("Dordain , J. \nFreiherr Von Braun , W. M. M. \nPávlovich Koroliov , S. \n")
+      expect(@l1.to_s).to eq("Dordain , J. \n"+
+                            "Freiherr Von Braun , W. M. M. (26-AGO-15) \n"+
+                            "Freiherr Von Braun , W. M. M. (27-AGO-15) \n"+
+                            "Pávlovich Koroliov , S. \n")
     end
   end
   
