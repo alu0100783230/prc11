@@ -60,7 +60,11 @@ module Listaa
         
         def autorTo_s
             f=""
-            @Author.collect { |x| f=f+x.to_s+" "} 
+            if(@Author.count>1)
+                @Author.collect { |x| f=f+x.to_s+" & "}
+            else
+                @Author.collect { |x| f=f+x.to_s}
+            end
             f
         end
     end
