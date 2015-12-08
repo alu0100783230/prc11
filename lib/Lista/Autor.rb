@@ -5,7 +5,7 @@ module Listaa
             @nombre = nombre
             @apellido = apellido
         end
-        def get ()
+        def to_s ()
             f=""
             @apellido.collect { |x| f=f+x.to_s+" "}
             f=f+", "

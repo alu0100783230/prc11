@@ -6,17 +6,17 @@ require './lib/Lista.rb'
 describe Listaa::Lista do
   before :all do
     @l = Listaa::Lista.new
-    @a = Revista.new
+    @a = Listaa::Revista.new
     @a.add_title("Nature")
-    @b = Libro.new
+    @b = Listaa::Libro.new
     @b.add_title("Frankenstein o el moderno Prometeo")
-    @c = DocumentoE.new
+    @c = Listaa::DocumentoE.new
     @c.add_title("B.O.E.")
     @l.push_back(@a)
     @l.push_back(@b)
     @l.push_back(@c)
     @n1 = Listaa::Autor.new(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
-    @b1 = Bibliografia.new
+    @b1 = Listaa::Bibliografia.new
     @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
   end
   
@@ -28,27 +28,27 @@ describe Listaa::Lista do
       expect(@n1.apellido).to eq(["Freiherr","von Braun"])
     end
     it "orden" do
-      expect(@n1.get).to eq("Freiherr von Braun , W. M. M. ")
+      expect(@n1.to_s).to eq("Freiherr von Braun , W. M. M. ")
     end
     it "orden bibliografico" do
-      expect(@b1.get).to eq("Freiherr von Braun , W. M. M. ")
+      expect(@b1.Author[0].to_s).to eq("Freiherr von Braun , W. M. M. ")
     end
   end
   
   describe "Comprobar tipo" do
     it "Libro" do
       expect(@b.get_tipo).to eq("Libro")
-      expect(@b.is_a?Bibliografia).to eq true
+      expect(@b.is_a?Listaa::Bibliografia).to eq true
     end
     
     it "Revista" do
       expect(@a.get_tipo).to eq("Revista")
-      expect(@a.is_a?Bibliografia).to eq true
+      expect(@a.is_a?Listaa::Bibliografia).to eq true
     end
     
     it "DocumentoE" do
       expect(@c.get_tipo).to eq("DocumentoE")
-      expect(@c.is_a?Bibliografia).to eq true
+      expect(@c.is_a?Listaa::Bibliografia).to eq true
     end
   end
   
