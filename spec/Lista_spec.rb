@@ -21,6 +21,9 @@ describe Listaa::Lista do
     @b2 = Listaa::Bibliografia.new
     @b3 = Listaa::Bibliografia.new
     @b4 = Listaa::Bibliografia.new
+    @b5 = Listaa::Bibliografia.new
+    @b5-.add_author(["Daniel"],["Darias"."Sánchez"])
+    @b5-.add_author(["Rudolf"],["Cicko"])
     @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
     @b1.set_publication("26-AGO-15")
     @b4.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
@@ -44,6 +47,9 @@ describe Listaa::Lista do
     it "orden" do
       expect(@n1.to_s).to eq("Freiherr Von Braun , W. M. M. ")
     end
+    it "&" do
+      expect(@b5.to_s).to eq("Darias Sánchez , D. & Cicko, R ")
+    end
     it "orden bibliografico" do
       expect(@b1.Author[0].to_s).to eq("Freiherr Von Braun , W. M. M. ")
     end
@@ -56,7 +62,6 @@ describe Listaa::Lista do
                             "Freiherr Von Braun , W. M. M. \n"+
                             "Freiherr Von Braun , W. M. M. \n"+
                             "Pávlovich Koroliov , S. \n")
-      
     end
     it "Desenpate" do
       @l2 = @l1.sort
