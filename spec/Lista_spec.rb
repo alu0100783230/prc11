@@ -22,15 +22,16 @@ describe Listaa::Lista do
     @b3 = Listaa::Bibliografia.new
     @b4 = Listaa::Bibliografia.new
     @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
-    @b1.set_publication("27-AGO-15")
+    @b1.set_publication("26-AGO-15")
     @b4.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
-    @b4.set_publication("26-AGO-15")
+    @b4.set_publication("27-AGO-15")
     @b2.add_author(["Serguéi"],["Pávlovich","Koroliov"])
     @b3.add_author(["Jean-Jacques"],["Dordain"])
     @l1.push_back(@b2)
     @l1.push_back(@b1)
     @l1.push_back(@b3)
     @l1.push_back(@b4)
+    
   end
   
   describe "Comprobar autor" do
@@ -52,9 +53,15 @@ describe Listaa::Lista do
     #a pesar de haber introducido las referencias al revés deben ordenarse
     it "Primero Von Braun" do
       expect(@l1.to_s).to eq("Dordain , J. \n"+
-                            "Freiherr Von Braun , W. M. M. (26-AGO-15) \n"+
-                            "Freiherr Von Braun , W. M. M. (27-AGO-15) \n"+
+                            "Freiherr Von Braun , W. M. M. \n"+
+                            "Freiherr Von Braun , W. M. M. \n"+
                             "Pávlovich Koroliov , S. \n")
+      
+    end
+    it "Desenpate" do
+      @l2 = @l1.sort
+      expect(@l2.at(1).Fecha_Publication).to eq("27-AGO-15")
+      expect(@l2.at(2).Fecha_Publication).to eq("26-AGO-15")
     end
   end
   
@@ -93,45 +100,4 @@ describe Listaa::Lista do
     end
   end
   
-  describe "Comparar" do
-    it "Nature > Frankenstein" do
-      expect(@a>@b).to eq(true)
-    end
-    
-    it "Nature > B.O.E." do
-      expect(@a>@c).to eq(true)
-    end
-    
-    it "B.O.E. < Frankenstein" do
-      expect(@c<@b).to eq(true)
-    end
-    
-    it "B.O.E. <=> Frankenstein = -1" do
-      expect(@c<=>@b).to eq(-1)
-    end
-  end
-  
-  describe "Enumerar" do
-    it "all?" do
-      expect(@l.all?).to eq(true)
-    end
-    it "count" do
-      expect(@l.count).to eq(3)
-    end
-    it "any?" do
-      expect(@l.any?).to eq(true)
-    end
-    it "max" do
-      expect(@l.max).to eq(@a)
-    end
-    it "min" do
-      expect(@l.min).to eq(@c)
-    end
-    it "drop" do
-      expect(@l.drop(0)).to eq([@a,@b,@c])
-    end
-    it "sort" do
-      expect(@l.sort).to eq([@c,@b,@a])
-    end
-  end
 end

@@ -47,10 +47,14 @@ module Listaa
         end
         
         def <=> (o)  
-            if @Title!=o.Title
-                @Title <=> o.Title
+            if autorTo_s!=o.autorTo_s
+                autorTo_s <=> o.autorTo_s
             else
-                @Fecha_Publication[7..10] <=> o.Fecha_Publication[7..10]
+                if(o.Fecha_Publication[7..10] > @Fecha_Publication[7..10])
+                    -1
+                else
+                    1
+                end
             end
         end
         
