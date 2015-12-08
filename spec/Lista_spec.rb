@@ -6,6 +6,7 @@ require './lib/Lista.rb'
 describe Listaa::Lista do
   before :all do
     @l = Listaa::Lista.new
+    @l1 = Listaa::Lista.new
     @a = Listaa::Revista.new
     @a.add_title("Nature")
     @b = Listaa::Libro.new
@@ -15,9 +16,13 @@ describe Listaa::Lista do
     @l.push_back(@a)
     @l.push_back(@b)
     @l.push_back(@c)
-    @n1 = Listaa::Autor.new(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
+    @n1 = Listaa::Autor.new(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
     @b1 = Listaa::Bibliografia.new
-    @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
+    @b2 = Listaa::Bibliografia.new
+    @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","Von Braun"])
+    @b2.add_author(["Serguéi"],["Pávlovich","Koroliov"])
+    @l1.push_back(@b2)
+    @l1.push_back(@b1)
   end
   
   describe "Comprobar autor" do
@@ -25,13 +30,20 @@ describe Listaa::Lista do
       expect(@n1.nombre).to eq(["Wernher","Magnus","Maximilian"])
     end
     it "apellido" do
-      expect(@n1.apellido).to eq(["Freiherr","von Braun"])
+      expect(@n1.apellido).to eq(["Freiherr","Von Braun"])
     end
     it "orden" do
-      expect(@n1.to_s).to eq("Freiherr von Braun , W. M. M. ")
+      expect(@n1.to_s).to eq("Freiherr Von Braun , W. M. M. ")
     end
     it "orden bibliografico" do
-      expect(@b1.Author[0].to_s).to eq("Freiherr von Braun , W. M. M. ")
+      expect(@b1.Author[0].to_s).to eq("Freiherr Von Braun , W. M. M. ")
+    end
+  end
+  
+  describe "Orden de la lista" do
+    #a pesar de haber introducido las referencias al revés deben ordenarse
+    it "Primero Von Braun" do
+      expect(@l1.at(0).Author[0]).to eq("Freiherr von Braun , W. M. M. ")
     end
   end
   
