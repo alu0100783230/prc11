@@ -43,7 +43,7 @@ describe Listaa::Lista do
   describe "Orden de la lista" do
     #a pesar de haber introducido las referencias al revés deben ordenarse
     it "Primero Von Braun" do
-      expect(@l1.at(0).Author[0]).to eq("Freiherr von Braun , W. M. M. ")
+      expect(@l1.to_s).to eq("Freiherr von Braun , W. M. M. , Pávlovich Koroliov , S. ")
     end
   end
   
