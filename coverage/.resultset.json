@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/ubuntu/workspace/Prct09/lib/Lista.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/Prct09/lib/Lista/Bibliografia.rb": [
         1,
         1,
@@ -50,16 +63,62 @@
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         1,
-        0,
-        0,
+        11,
+        11,
         null,
         0,
         null,
         null,
+        null
+      ],
+      "/home/ubuntu/workspace/Prct09/lib/Lista/DocumentoE.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/Prct09/lib/Lista/Libro.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/Prct09/lib/Lista/Revista.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/workspace/Prct09/lib/Lista/version.rb": [
+        null,
+        1,
+        1,
         null
       ],
       "/home/ubuntu/workspace/Prct09/lib/Lista/Lista.rb": [
@@ -149,28 +208,17 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        7,
+        7,
+        19,
+        18,
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/Prct09/lib/Lista/DocumentoE.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/Prct09/lib/Lista/Revista.rb": [
-        1,
-        null,
+      "/home/ubuntu/workspace/Prct09/lib/Lista/Autor.rb": [
         1,
         1,
         1,
@@ -178,28 +226,17 @@
         1,
         1,
         null,
-        null,
         1,
-        0,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/Prct09/lib/Lista/Libro.rb": [
+        1,
+        3,
+        1,
+        4,
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        0,
         null,
         null
       ]
     },
-    "timestamp": 1449605483
+    "timestamp": 1449607032
   }
 }

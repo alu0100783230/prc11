@@ -1,11 +1,7 @@
 #! encoding UTF-8
 
 require 'spec_helper'
-require './lib/Lista/Bibliografia.rb'
-require './lib/Lista/Lista.rb'
-require './lib/Lista/DocumentoE.rb'
-require './lib/Lista/Revista.rb'
-require './lib/Lista/Libro.rb'
+require './lib/Lista.rb'
 
 describe Listaa::Lista do
   before :all do
@@ -19,18 +15,18 @@ describe Listaa::Lista do
     @l.push_back(@a)
     @l.push_back(@b)
     @l.push_back(@c)
-    @n1 = Listaa::Autor.new(["Wernher" "Magnus" "Maximilian"] ["Freiherr" "von Braun"])
+    @n1 = Listaa::Autor.new(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
   end
   
   describe "Comprobar autor" do
     it "nombre" do
-      expect(@n1.nombre).to eq("Wernher Magnus Maximilian")
+      expect(@n1.nombre).to eq(["Wernher","Magnus","Maximilian"])
     end
     it "apellido" do
-      expect(@n1.apellido).to eq("Freiherr von Braun")
+      expect(@n1.apellido).to eq(["Freiherr","von Braun"])
     end
     it "orden" do
-      expect(@n1.get).to eq("Freiherr von Braun, W. M. M.")
+      expect(@n1.get).to eq("Freiherr von Braun , W. M. M. ")
     end
   end
     

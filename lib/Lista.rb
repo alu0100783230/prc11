@@ -4,6 +4,7 @@ require "Lista/Libro.rb"
 require "Lista/Revista.rb"
 require "Lista/version.rb"
 require "Lista/Lista.rb"
+require "Lista/Autor.rb"
 
 module Listaa
     
