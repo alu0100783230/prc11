@@ -53,5 +53,11 @@ module Listaa
                 @Fecha_Publication[7..10] <=> o.Fecha_Publication[7..10]
             end
         end
+        
+        def to_s 
+            f=""
+            @Autor.collect { |x| f=f+x.to_s+" "} 
+            f
+        end
     end
 end

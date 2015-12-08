@@ -90,6 +90,14 @@ class Lista
             aux = aux.next
         end
     end
+    
+    def to_s 
+        a = []
+        a = sort { |x,y| x.Author[0].to_s <=> y.Author[0].to_s }
+        f=""
+        a.collect{ |x| f=f+x.Author[0].to_s+", "}
+        f
+    end
 end
 
 end
