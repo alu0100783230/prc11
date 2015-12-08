@@ -55,8 +55,12 @@ module Listaa
         end
         
         def to_s 
+
+        end
+        
+        def autorTo_s
             f=""
-            @Autor.collect { |x| f=f+x.to_s+" "} 
+            @Author.collect { |x| f=f+x.to_s+" "} 
             f
         end
     end

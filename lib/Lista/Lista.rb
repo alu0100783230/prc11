@@ -93,9 +93,9 @@ class Lista
     
     def to_s 
         a = []
-        a = sort { |x,y| x.Author[0].to_s <=> y.Author[0].to_s }
+        a = sort { |x,y| x.autorTo_s <=> y.autorTo_s }
         f=""
-        a.collect{ |x| f=f+x.Author[0].to_s+", "}
+        a.collect{ |x| f=f+x.autorTo_s+", "}
         f
     end
 end
