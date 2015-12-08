@@ -16,6 +16,8 @@ describe Listaa::Lista do
     @l.push_back(@b)
     @l.push_back(@c)
     @n1 = Listaa::Autor.new(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
+    @b1 = Bibliografia.new
+    @b1.add_author(["Wernher","Magnus","Maximilian"],["Freiherr","von Braun"])
   end
   
   describe "Comprobar autor" do
@@ -28,8 +30,10 @@ describe Listaa::Lista do
     it "orden" do
       expect(@n1.get).to eq("Freiherr von Braun , W. M. M. ")
     end
+    it "orden bibliografico" do
+      expect(@b1.get).to eq("Freiherr von Braun , W. M. M. ")
+    end
   end
-    
   
   describe "Comprobar tipo" do
     it "Libro" do
