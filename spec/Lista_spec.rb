@@ -1,3 +1,5 @@
+#! encoding UTF-8
+
 require 'spec_helper'
 require './lib/Lista/Bibliografia.rb'
 require './lib/Lista/Lista.rb'
