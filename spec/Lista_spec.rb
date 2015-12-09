@@ -102,7 +102,7 @@ describe Listaa do
                             "(10). ULL")
     end
     it "Revista" do
-      expect(@m.to_s).to eq("Díaz Delgado , E. (2014). La Revista más Necesaria Para la Vida Diaria "+
+      expect(@m.to_s).to eq("Díaz Delgado , E. (2013). La Revista más Necesaria Para la Vida Diaria "+
                             "(2). Ediciones Ele")
     end
   end
