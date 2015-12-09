@@ -34,14 +34,15 @@ describe Listaa do
     @l1.push_back(@b1)
     @l1.push_back(@b3)
     @l1.push_back(@b4)
-    
+    @l3 = Listaa::Lista.new
+    #Expetativa de Libro
     @b.add_author(["Mary"],["Shelley"])
     @b.add_ISBN(10,4465448)
     @b.add_editorial("Ediciones B")
     @b.add_serie("Ciencia Ficción")
     @b.set_edicion(15)
     @b.set_publication(2015)
-    
+    #Expetativa de Documento Electrónico
     @w = Listaa::DocumentoE.new
     @w.add_title("Práctica de laboratorio #10")
     @w.add_author(["Coromoto"],["León","Hernández"])
@@ -49,7 +50,7 @@ describe Listaa do
     @w.add_serie("LPP")
     @w.set_edicion(10)
     @w.set_publication(2015)
-    
+    #Expetativa de Revista
     @m = Listaa::Revista.new
     @m.add_title("La revista más necesaria para la vida diaria")
     @m.add_author(["Eleazar"],["Díaz","Delgado"])
@@ -57,6 +58,10 @@ describe Listaa do
     @m.add_serie("SERIE")
     @m.set_edicion(2)
     @m.set_publication(2013)
+    
+    @l3.push_back(@a)
+    @l3.push_back(@w)
+    @l3.push_back(@m)
   end
   
   describe "Comprobar autor" do
@@ -121,6 +126,12 @@ describe Listaa do
     it "DocumentoE" do
       expect(@c.get_tipo).to eq("DocumentoE")
       expect(@c.is_a?Listaa::Bibliografia).to eq true
+    end
+  end
+  
+  describe "Comprobar Lista entera" do
+    it "" do
+      expect(@l3.to_apa).to eq(@w.to_s+"\n"+@m.to_s+"\n"+@a.to_s+"\n")
     end
   end
   
