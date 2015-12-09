@@ -92,7 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   Lista!
-  bundler (~> 1.10)
+  bundler (~> 1.7)
   coveralls
   guard
   guard-bundler
