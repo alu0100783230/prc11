@@ -99,6 +99,15 @@ class Lista
         a.collect{ |x| f=f+x.autorTo_s+"\n"}
         f
     end
+    
+    def to_apa
+        a = []
+        a = sort { |x,y| x <=> y }
+        
+        f=""
+        a.collect{ |x| f=f+x.to_s+"\n"}
+        f
+    end
 end
 
 end

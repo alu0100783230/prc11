@@ -7,6 +7,7 @@ describe Listaa do
   before :all do
     @l = Listaa::Lista.new
     @l1 = Listaa::Lista.new
+    @l3 = Listaa::Lista.new
     @a = Listaa::Revista.new
     @a.add_title("Nature")
     @b = Listaa::Libro.new
@@ -130,8 +131,13 @@ describe Listaa do
   end
   
   describe "Comprobar Lista entera" do
-    it "" do
-      expect(@l3.to_apa).to eq(@w.to_s+"\n"+@m.to_s+"\n"+@a.to_s+"\n")
+    it "Tamaño" do
+      expect(@l3.count).to eq(3)
+    end
+    it "APA" do
+      #expect(@l1.to_apa).to eq("León Hernández , C. (2015). Práctica de laboratorio #10 (10). ULL \n"+
+      #                         "Díaz Delgado , E. (2013). La Revista más Necesaria Para la Vida Diaria (2). Ediciones Ele \n"+
+      #                         "Shelley , M. (2015). Frankenstein o el moderno Prometeo (15). Ediciones B \n")
     end
   end
   

@@ -63,10 +63,6 @@ module Listaa
             end
         end
         
-        def to_s 
-
-        end
-        
         def autorTo_s
             f=""
             if(@Author.count>1)
