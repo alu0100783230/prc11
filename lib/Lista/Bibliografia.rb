@@ -11,7 +11,7 @@ module Listaa
             @Edicion = 0
             @Fecha_Publication = "01-ENE-1901"
             @Tipo = nil
-        end
+        end 
     
         def add_author(name,apellido)
             if(@Author == nil)
