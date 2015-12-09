@@ -1,6 +1,7 @@
 # Lista
 
 [![Build Status](https://travis-ci.org/alu0100783230/prct09.svg?branch=master)](https://travis-ci.org/alu0100783230/prct09)
+[![Coverage Status](https://coveralls.io/repos/alu0100783230/prct10/badge.svg?branch=master&service=github)](https://coveralls.io/github/alu0100783230/prct10?branch=master)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Lista`. To experiment with that code, run `bin/console` for an interactive prompt.
 
