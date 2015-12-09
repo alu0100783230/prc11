@@ -41,6 +41,14 @@ describe Listaa do
     @b.add_serie("Ciencia Ficción")
     @b.set_edicion(15)
     @b.set_publication(2015)
+    
+    @w = Listaa::DocumentoE.new
+    @w.add_title("Práctica de laboratorio #10")
+    @w.add_author(["Coromoto"],["León","Hernández"])
+    @w.add_editorial("ULL")
+    @w.add_serie("LPP")
+    @w.set_edicion(10)
+    @w.set_publication(2015)
   end
   
   describe "Comprobar autor" do
@@ -80,6 +88,10 @@ describe Listaa do
     it "Libro" do
       expect(@b.to_s).to eq("Shelley , M. (2015). Frankenstein o el moderno Prometeo "+
                             "(15). Ediciones B")
+    end
+    it "Documento Electrónico" do
+      expect(@w.to_s).to eq("León, Hernández , C. (2015). Práctica de laboratorio #10 "+
+                            "(10). ULL")
     end
   end
   
