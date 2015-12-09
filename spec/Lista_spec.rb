@@ -35,7 +35,7 @@ describe Listaa do
     @l1.push_back(@b3)
     @l1.push_back(@b4)
     
-    @b.add_author("a","b")
+    @b.add_author(["Mary"],["Shelley"])
     @b.add_ISBN(10,4465448)
     @b.add_editorial("Ediciones B")
     @b.add_serie("Ciencia Ficción")
