@@ -90,7 +90,7 @@ describe Listaa do
                             "(15). Ediciones B")
     end
     it "Documento Electrónico" do
-      expect(@w.to_s).to eq("León, Hernández , C. (2015). Práctica de laboratorio #10 "+
+      expect(@w.to_s).to eq("León Hernández , C. (2015). Práctica de laboratorio #10 "+
                             "(10). ULL")
     end
   end
