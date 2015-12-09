@@ -14,7 +14,12 @@ module Listaa
         end
     
         def add_author(name,apellido)
-            @Author << Listaa::Autor.new(name,apellido)
+            if(@Author == nil)
+                @Author = []
+                @Author[0] = Listaa::Autor.new(name,apellido)
+            else
+                @Author << Listaa::Autor.new(name,apellido)
+            end
         end
         
         def add_title(name)

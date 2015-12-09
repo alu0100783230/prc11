@@ -3,7 +3,7 @@
 require 'spec_helper'
 require './lib/Lista.rb'
 
-describe Listaa::Lista do
+describe Listaa do
   before :all do
     @l = Listaa::Lista.new
     @l1 = Listaa::Lista.new
@@ -35,6 +35,12 @@ describe Listaa::Lista do
     @l1.push_back(@b3)
     @l1.push_back(@b4)
     
+    @b.add_author("a","b")
+    @b.add_ISBN(10,4465448)
+    @b.add_editorial("Ediciones B")
+    @b.add_serie("Ciencia Ficción")
+    @b.set_edicion(15)
+    @b.set_publication(2015)
   end
   
   describe "Comprobar autor" do
@@ -70,6 +76,13 @@ describe Listaa::Lista do
     end
   end
   
+  describe "Referencia completa" do
+    it "Libro" do
+      expect(@b.to_s).to eq("Shelley , M. (2015). Frankenstein o el moderno Prometeo "+
+                            "(15). Ediciones B")
+    end
+  end
+  
   describe "Comprobar tipo" do
     it "Libro" do
       expect(@b.get_tipo).to eq("Libro")
@@ -94,7 +107,6 @@ describe Listaa::Lista do
     end
     
     it "ISBN de un libro" do
-      @b.add_ISBN(10,4465448)
       @b.add_ISBN(13,9846546)
       expect(@b.ISBN).to eq([[10,4465448],[13,9846546]])
     end

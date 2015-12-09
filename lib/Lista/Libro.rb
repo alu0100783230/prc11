@@ -10,5 +10,9 @@ module Listaa
         def add_ISBN(fech,num) 
             @ISBN << [fech,num]
         end
+        
+        def to_s 
+            
+        end
     end 
 end
