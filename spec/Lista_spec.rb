@@ -49,6 +49,14 @@ describe Listaa do
     @w.add_serie("LPP")
     @w.set_edicion(10)
     @w.set_publication(2015)
+    
+    @m = Listaa::Revista.new
+    @m.add_title("La revista más necesaria para la vida diaria")
+    @m.add_author(["Eleazar"],["Díaz","Delgado"])
+    @m.add_editorial("Ediciones Ele")
+    @m.add_serie("SERIE")
+    @m.set_edicion(2)
+    @m.set_publication(2013)
   end
   
   describe "Comprobar autor" do
@@ -92,6 +100,10 @@ describe Listaa do
     it "Documento Electrónico" do
       expect(@w.to_s).to eq("León Hernández , C. (2015). Práctica de laboratorio #10 "+
                             "(10). ULL")
+    end
+    it "Revista" do
+      expect(@m.to_s).to eq("Díaz Delgado , E. (2014). La Revista más Necesaria Para la Vida Diaria "+
+                            "(2). Ediciones Ele")
     end
   end
   
