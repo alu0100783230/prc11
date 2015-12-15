@@ -3,7 +3,7 @@ module Listaa
         include Comparable
         attr_reader :Author, :Title, :Serie, :Editorial, :Edicion
         attr_reader :Fecha_Publication
-        def initialize 
+        def initialize(nombre = "Sin título") 
             @Author = []
             @Title = "Sin título"
             @Serie = nil
