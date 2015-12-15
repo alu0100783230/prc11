@@ -5,7 +5,7 @@ module Listaa
         attr_reader :Fecha_Publication
         def initialize(nombre = "Sin título") 
             @Author = []
-            @Title = "Sin título"
+            @Title = nombre
             @Serie = nil
             @Editorial = "Editorial sin definir"
             @Edicion = 0
