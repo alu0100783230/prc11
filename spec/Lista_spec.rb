@@ -63,6 +63,10 @@ describe Listaa do
     @l3.push_back(@a)
     @l3.push_back(@w)
     @l3.push_back(@m)
+    
+    
+    
+    @bibligrafia_1 = Listaa::Bibliografia.new("Título1")
   end
   
   describe "Comprobar autor" do
