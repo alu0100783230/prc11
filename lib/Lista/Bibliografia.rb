@@ -1,9 +1,9 @@
 module Listaa
     class Bibliografia
         include Comparable
-        attr_reader :Author, :Title, :Serie, :Editorial, :Edicion
-        attr_reader :Fecha_Publication
-        def initialize(nombre = "Sin título") 
+        attr_accessor :Author, :Title, :Serie, :Editorial, :Edicion
+        attr_accessor :Fecha_Publication
+        def initialize(nombre = "Sin título", &block) 
             @Author = []
             @Title = nombre
             @Serie = nil
@@ -11,6 +11,8 @@ module Listaa
             @Edicion = 0
             @Fecha_Publication = "01-ENE-1901"
             @Tipo = nil
+            
+            instance_eval &block 
         end 
     
         def add_author(name,apellido)
@@ -71,6 +73,15 @@ module Listaa
                 @Author.collect { |x| f=f+x.to_s}
             end
             f
+        end
+        
+        def autor(apellido,nombre)
+            if(@Author == nil)
+                @Author = []
+                @Author[0] = Listaa::Autor.new(nombre,apellido)
+            else
+                @Author << Listaa::Autor.new(nombre,apellido)
+            end
         end
     end
 end
