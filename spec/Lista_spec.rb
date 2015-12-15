@@ -66,13 +66,22 @@ describe Listaa do
     
     
     
-    @bibligrafia_1 = Listaa::Bibliografia.new("Título1")
+    @bibligrafia_1 = Listaa::Bibliografia.new("Dune") do
+      author "Frank Herbert"
+      
+      
+      
+    end
   end
   
   describe "Comprobar Lenguaje de Dominio Específico" do
     it "Título" do
-      expect(@bibligrafia_1.Title).to eq("Título1")
+      expect(@bibligrafia_1.Title).to eq("Dune")
     end
+    it "Autor" do
+      expect(@bibligrafia_1.Author).to eq("Frank Herbert")
+    end
+    
   end
   
   describe "Comprobar autor" do
