@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{"Las expectativas cubren casi todo"}
   spec.description   = %q{"Mucho"}
-  spec.homepage      = "www.ull.es"
+  spec.homepage      = "http://www.ull.es"
   spec.license       = "MIT"
 
 
