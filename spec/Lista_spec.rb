@@ -1,4 +1,4 @@
-#! encoding UTF-8
+# coding: utf-8
 
 require 'spec_helper'
 require './lib/Lista.rb'
