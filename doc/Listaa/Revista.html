@@ -205,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Revista) <strong>initialize</strong>(nombre, &amp;block) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Revista) <strong>initialize</strong>(nombre = &quot;&quot;, &amp;block) </a>
     
 
     
@@ -293,7 +293,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Listaa::Revista (class)">Revista</a></span></tt>) <strong>initialize</strong>(nombre, &amp;block) 
+    - (<tt><span class='object_link'><a href="" title="Listaa::Revista (class)">Revista</a></span></tt>) <strong>initialize</strong>(nombre = &quot;&quot;, &amp;block) 
   
 
   
@@ -327,7 +327,7 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/Lista/Revista.rb', line 6</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='comma'>,</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='rparen'>)</span>
     <span class='ivar'>@Tipo</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Revista</span><span class='tstring_end'>&quot;</span></span>
     <span class='ivar'>@impacto</span> <span class='op'>=</span> <span class='int'>0</span>
     <span class='ivar'>@ISSN</span> <span class='op'>=</span> <span class='int'>00000000</span>
@@ -548,7 +548,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Dec 16 01:00:17 2015 by
+  Generated on Wed Dec 16 01:08:20 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.2).
 </div>
