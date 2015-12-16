@@ -11,7 +11,7 @@ describe Listaa do
   
   describe "Comprobar Lenguaje de Dominio Específico" do
     before :each do
-      @bibligrafia_1 = Listaa::Bibliografia::Libro.new("Dune") do
+      @bibligrafia_1 = Listaa::Libro.new("Dune") do
           autor ["Herbert"],["Frank"]
           editorial "DeBolsillo"
           fecha "01-ENE-1991"
