@@ -2,7 +2,7 @@ require './lib/Lista/Bibliografia.rb'
 
 module Listaa
     class DocumentoE < Bibliografia
-        def initialize(nombre,&block) super(nombre)
+        def initialize(nombre = "",&block) super(nombre)
             @Tipo = "DocumentoE"  
             
             instance_eval &block 

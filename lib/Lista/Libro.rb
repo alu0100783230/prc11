@@ -2,7 +2,7 @@ require './lib/Lista/Bibliografia.rb'
 module Listaa
     class Libro < Bibliografia
         attr_reader :ISBN
-        def initialize(nombre,&block) super(nombre)
+        def initialize(nombre = "",&block) super(nombre)
             @Tipo = "Libro"
             @ISBN = []
             
