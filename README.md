@@ -1,7 +1,7 @@
 # Lista
 
-[![Build Status](https://travis-ci.org/alu0100783230/prct10.svg)](https://travis-ci.org/alu0100783230/prct10)
-[![Coverage Status](https://coveralls.io/repos/alu0100783230/prct10/badge.svg?branch=master&service=github)](https://coveralls.io/github/alu0100783230/prct10?branch=master)
+[![Build Status](https://travis-ci.org/alu0100783230/prc11.svg?branch=master)](https://travis-ci.org/alu0100783230/prc11)
+[![Coverage Status](https://coveralls.io/repos/alu0100783230/prc11/badge.svg?branch=master&service=github)](https://coveralls.io/github/alu0100783230/prc11?branch=master)
 
 Gema útil para crear referencias bibliográficas
 
