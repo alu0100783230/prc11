@@ -17,6 +17,7 @@ describe Listaa do
           editorial "DeBolsillo"
           fecha "01-ENE-1991"
           edicion "1"
+          isbn ["10","123456789"]
       end
     end
     
@@ -27,7 +28,8 @@ describe Listaa do
       expect(@bibligrafia_1.autorTo_s).to eq("Herbert , F.  & Coautor , N.  & ")
     end
     it "APA" do
-      #expect(@bibligrafia_1.to_s).to eq("Herbert , F. ")
+      expect(@bibligrafia_1.to_s).to eq("Herbert , F.  & Coautor , N.  & "+
+                                        "(2015). Dune. Editorial DeBolsillo.")
     end
   end
   
