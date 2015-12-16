@@ -14,6 +14,16 @@ describe Listaa do
           edicion "1"
           isbn "10","123456789"
       end
+      @bibligrafia_2 = Listaa::Libro.new("Fundacion") do
+          autor "Asimov","Isaac"
+          editorial "DeBolsillo"
+          fecha "1981"
+          edicion "1"
+          isbn "11","1288789"
+      end
+      @lista = Listaa::Lista.new
+      @lista.push_back(@bibligrafia_1)
+      @lista.push_back(@bibligrafia_2)
     end
     
     it "Título" do
@@ -27,6 +37,11 @@ describe Listaa do
     it "APA" do
       expect(@bibligrafia_1.to_s).to eq("Herbert , F.  & Coautor , N.  & "+
                                         "(1991). Dune (1). DeBolsillo")
+    end
+    
+    it "Lista" do
+      expect(@lista.to_apa).to eq("Asimov , I. (1981). Fundacion (1). DeBolsillo\n"+
+                                  "Herbert , F.  & Coautor , N.  & (1991). Dune (1). DeBolsillo\n")
     end
   end
 end
