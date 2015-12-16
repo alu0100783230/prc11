@@ -13,6 +13,7 @@ describe Listaa do
     before :each do
       @bibligrafia_1 = Listaa::Libro.new("Dune") do
           autor ["Herbert"],["Frank"]
+          autor ["Coautor"],["Nombre"]
           editorial "DeBolsillo"
           fecha "01-ENE-1991"
           edicion "1"
@@ -23,10 +24,10 @@ describe Listaa do
       expect(@bibligrafia_1.Title).to eq("Dune")
     end
     it "Autor" do
-      expect(@bibligrafia_1.Author[0].to_s).to eq("Herbert , F. ")
+      expect(@bibligrafia_1.autorTo_s).to eq("Herbert , F.  & Coautor , N.  & ")
     end
     it "APA" do
-      expect(@bibligrafia_1.get_formato).to eq("Herbert , F. \nDune\n; 1 edition (01-ENE-1991)\n")
+      #expect(@bibligrafia_1.to_s).to eq("Herbert , F. ")
     end
   end
   
