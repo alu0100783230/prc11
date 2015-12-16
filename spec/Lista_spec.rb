@@ -88,9 +88,9 @@ describe Listaa do
     @m.set_edicion(2)
     @m.set_publication(2013)
     
-    @l3.push_back(@a)
     @l3.push_back(@w)
     @l3.push_back(@m)
+    @l3.push_back(@b)
   end
   
   describe "Comprobar autor" do
@@ -163,9 +163,9 @@ describe Listaa do
       expect(@l3.count).to eq(3)
     end
     it "APA" do
-      #expect(@l1.to_apa).to eq("León Hernández , C. (2015). Práctica de laboratorio #10 (10). ULL \n"+
-      #                         "Díaz Delgado , E. (2013). La Revista más Necesaria Para la Vida Diaria (2). Ediciones Ele \n"+
-      #                         "Shelley , M. (2015). Frankenstein o el moderno Prometeo (15). Ediciones B \n")
+      expect(@l3.to_apa).to eq("Díaz Delgado , E. (2013). La Revista más Necesaria Para la Vida Diaria (2). Ediciones Ele\n"+
+                                "León Hernández , C. (2015). Práctica de laboratorio #10 (10). ULL\n"+
+                               "Shelley , M. (2015). Frankenstein o el moderno Prometeo (15). Ediciones B\n")
     end
   end
   
