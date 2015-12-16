@@ -83,5 +83,17 @@ module Listaa
                 @Author << Listaa::Autor.new(nombre,apellido)
             end
         end
+        
+        def editorial(edi)
+            @Editorial = edi
+        end
+        
+        def fecha(fech)
+            @Fecha_Publication = fech
+        end
+        
+        def edicion(edi)
+            @Edicion = edi
+        end
     end
 end
