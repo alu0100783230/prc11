@@ -25,6 +25,9 @@ describe Listaa do
     it "Autor" do
       expect(@bibligrafia_1.Author[0].to_s).to eq("Herbert , F. ")
     end
+    it "APA" do
+      expect(@bibligrafia_1.get_formato).to eq("Herbert , F. \nDune\n; 1 edition (01-ENE-1991)\n")
+    end
   end
   
   
