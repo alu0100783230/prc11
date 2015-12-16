@@ -3,10 +3,12 @@ require './lib/Lista/Bibliografia.rb'
 module Listaa
     class Revista < Bibliografia
         attr_accessor :impacto, :ISSN
-        def initialize
+        def initialize(nombre,&block) super(nombre)
             @Tipo = "Revista"
             @impacto = 0
             @ISSN = 00000000
+            
+            instance_eval &block 
         end
         
         def add_ISSN(num)
