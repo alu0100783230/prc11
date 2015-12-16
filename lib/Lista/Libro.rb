@@ -17,8 +17,8 @@ module Listaa
             f = autorTo_s+"("+@Fecha_Publication.to_s+"). "+@Title+" ("+@Edicion.to_s+"). "+@Editorial
         end
         
-        def isbn(isbn)
-            @ISBN = isbn
+        def isbn(fech,num)
+            @ISBN << [fech,num]
         end
     end 
 end

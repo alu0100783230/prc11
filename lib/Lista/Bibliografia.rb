@@ -74,7 +74,7 @@ module Listaa
         end
         
         def autor(apellido,nombre)
-            @Author << Listaa::Autor.new(nombre,apellido)
+            @Author << Listaa::Autor.new([nombre],[apellido])
         end
         
         def editorial(edi)
